@@ -1,24 +1,3 @@
-// TODO:   Index
-//         1. Random image of any dog (https://dog.ceo/api/breeds/image/random) (DONE)
-//         2. Button to update image (updateImage) (DONE)
-//         3. List with all breeds (https://dog.ceo/api/breeds/list/all) (DONE)
-//         4. Event listener to each breed, that links to sub-page (#breed-...) (DONE)
-//         5. Header for text (DONE)
-
-// TODO:   Breed
-//         1. Random image of a given breed (https://dog.ceo/api/breed/ + hash + /images/random) (DONE)
-//         2. Button to update image (updateImage) (DONE)
-//         3. List all sub-breeds from given breed, if any (https://dog.ceo/api/breed/ + hash + /list) (DONE)
-//         4. Event listener to each sub-breed, that links to sub-breed page (#breed-.../...) (DONE)
-//         5. Header for text with breed name (DONE)
-//         6. Render all breed images (getAllBreedImages, https://dog.ceo/api/breed/ + hash + /images) (DONE)
-
-// TODO:   Sub-breed
-//         1. Random image of given sub-breed (https://dog.ceo/api/breed/ + hash + /images/random) (DONE)
-//         2. Buton to update image (updateImage) (DONE)
-//         3. Render all sub-breed images (getAllBreedImages, https://dog.ceo/api/breed/ + hash + /images) (DONE)
-//         4. Header for text whith breed and sub-breed name (DONE)
-
 let body = document.body;
 let header = document.createElement("h1");
 let randomImage = document.createElement("img");
@@ -138,7 +117,6 @@ function setList(list, hash) {
         request();
       });
       span.textContent = i;
-      span.style.textTransform = "capitalize";
 
       li.appendChild(span);
       ul.appendChild(li);
@@ -153,7 +131,6 @@ function setList(list, hash) {
         request();
       });
       span.textContent = key;
-      span.style.textTransform = "capitalize";
       li.appendChild(span);
       if (list[key].length > 0) {
         li.appendChild(setList(list[key], hash + key));
@@ -194,7 +171,6 @@ function setImages(list) {
   for (let i of list) {
     let img = document.createElement("img");
     img.setAttribute("src", i);
-    img.style.height = "200px";
 
     div.appendChild(img);
   }

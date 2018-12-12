@@ -1,0 +1,39 @@
+/*List settings*/
+ul {
+  list-style-type: none;
+  padding: 0;
+  width: 10%;
+}
+
+ul ul {
+  padding-left: 20px;
+}
+
+li {
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+
+li li {
+  border: none;
+}
+
+span {
+  text-transform: capitalize;
+  font-size: 18px;
+}
+
+span:hover {
+  color: rgb(200, 0, 0);
+}
+
+/*Images settings*/
+div img {
+  height: 250px;
+  padding-right: 5px;
+  transition: transform 0.5s;
+}
+
+div img:hover {
+  transform: scale(1.5);
+}
